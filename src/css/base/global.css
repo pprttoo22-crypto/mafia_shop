@@ -1,0 +1,51 @@
+details {
+    font-size: 13px;
+    color: #c9c0bd
+}
+
+summary {
+    cursor: pointer;
+    color: var(--gd)
+}
+
+details ul {
+    padding-left: 18px;
+    margin-top: 6px;
+    line-height: 1.6
+}
+
+header,
+.hero h1,
+.hero p,
+.catalog-toolbar,
+.product-grid {
+    transition: opacity 1.1s, transform 1.1s
+}
+
+body.intro-transition-active header {
+    opacity: 0;
+    transform: translateY(-20px)
+}
+
+body.intro-transition-active .hero h1,
+body.intro-transition-active .hero p,
+body.intro-transition-active .catalog-toolbar,
+body.intro-transition-active .product-grid {
+    opacity: 0;
+    transform: translateY(24px)
+}
+
+#page-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s
+}
+
+#page-overlay.is-visible {
+    opacity: 1;
+    pointer-events: auto
+}
